@@ -1,6 +1,7 @@
 #!/usr/bin/node
-let cpt = 0;
+let narg = 0;
+
 exports.logMe = function (item) {
-  console.log(cpt + ': ' + item);
-  cpt += 1;
+  console.log(narg + ': ' + item);
+  narg++;
 };
