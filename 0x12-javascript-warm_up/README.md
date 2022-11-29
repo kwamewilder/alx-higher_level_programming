@@ -1,0 +1,1 @@
+Javascript wamr up
