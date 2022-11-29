@@ -1,5 +1,12 @@
 #!/usr/bin/node
-exports.addMeMaybe = function (var1, callback) {
-	var1 = var1 + 1;
-	callback(var1);
+module.exports = {
+  /**
+   * addMeMaybe - Invokes a function after incrementing its argument by 1.
+   * @param {Number} number - The given function's argument.
+   * @param {Number} theFunction - The function to be invoked.
+   */
+  addMeMaybe: function (number, theFunction) {
+    number++;
+    theFunction(number);
+  }
 };

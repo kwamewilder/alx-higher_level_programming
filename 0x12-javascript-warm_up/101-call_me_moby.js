@@ -1,6 +1,13 @@
 #!/usr/bin/node
-exports.callMeMoby = function (var1, callback) {
-	for (let i = 0; i < var1; i++) {
-		callback(var1);
-	}
+module.exports = {
+  /**
+   * callMeMoby - Invokes a function x times.
+   * @param {Number} x - The number of times to invoke the function.
+   * @param {Number} theFunction - The function to be invoked.
+   */
+  callMeMoby: function (x, theFunction) {
+    for (let i = 0; i < x; i++) {
+      theFunction();
+    }
+  }
 };
