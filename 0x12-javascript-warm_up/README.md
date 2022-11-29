@@ -1,1 +1,1 @@
-Javascript wamr up
+ jav script
