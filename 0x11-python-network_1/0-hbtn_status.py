@@ -20,3 +20,4 @@ def get_alx_status():
 
 if __name__ == "__main__":
     get_alx_status()
+
