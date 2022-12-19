@@ -1,12 +1,16 @@
 #!/usr/bin/python3
-"""takes URL, sends request to URL and display value of the X-Request-Id"""
-
-import sys
+"""
+    Module to get response header value of a url.
+"""
 import urllib.request
+import sys
 
-if __name__ == '__main__':
 
-    url = sys.argv[1]
-    req = urllib.request.Request(url)
-    with urllib.request.urlopen(req) as response:
-        print(dict(response.headers).get("X-Request-Id"))
+if __name__ == "__main__":
+    try:
+        with urllib.request.urlopen(sys.argv[1]) as resp:
+            if resp is not None:
+                idr = resp.getheader('X-Request-Id')
+            print(idr)
+    except Exception:
+        pass
